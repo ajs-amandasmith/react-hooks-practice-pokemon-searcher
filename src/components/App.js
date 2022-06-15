@@ -20,8 +20,4 @@ App
           |__PokemonCollection
                     |__PokemonCard
 
-
-Project Goals
-Wire up the form to add a missing Pokemon (Bulbasaur is missing, and you can probably intuit the image links to use based on the data you have). Since there aren't any validations, you may have to manually remove additions from the db.json file if you make a mistake on a POST request, etc. When a new Pokemon is added, it should show on the page without having to refresh.
-
 */

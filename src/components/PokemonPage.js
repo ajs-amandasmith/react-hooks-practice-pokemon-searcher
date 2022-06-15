@@ -18,11 +18,15 @@ function PokemonPage() {
     setSearch(searchTerm)
   }
 
+  function submitNewPokemon(newPoke) {
+    setPokeData([...pokeData, newPoke])
+  }
+
   return (
     <Container>
       <h1>Pokemon Searcher</h1>
       <br />
-      <PokemonForm />
+      <PokemonForm submitNewPokemon={submitNewPokemon} />
       <br />
       <Search search={search} handleSearch={handleSearch} />
       <br />
