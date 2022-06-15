@@ -26,7 +26,7 @@ function PokemonPage() {
       <br />
       <Search search={search} handleSearch={handleSearch} />
       <br />
-      <PokemonCollection pokeData={pokeData} />
+      <PokemonCollection pokeData={pokeData} search={search} />
     </Container>
   );
 }

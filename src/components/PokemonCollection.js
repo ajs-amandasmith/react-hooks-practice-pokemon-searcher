@@ -2,14 +2,17 @@ import React from "react";
 import PokemonCard from "./PokemonCard";
 import { Card } from "semantic-ui-react";
 
-function PokemonCollection({ pokeData }) {
-  const displayPokemon = pokeData.map(pokemon => (
-    <PokemonCard 
-      key={pokemon.id}
-      name={pokemon.name}
-      hp={pokemon.hp}
-      sprites={pokemon.sprites}
-    />
+function PokemonCollection({ pokeData, search }) {
+  const displayPokemon = pokeData.filter((pokemon) => {
+    if (search === '') return true;
+    return pokemon.name.includes(search.toLowerCase())
+  }).map(pokemon => (
+      <PokemonCard 
+        key={pokemon.id}
+        name={pokemon.name}
+        hp={pokemon.hp}
+        sprites={pokemon.sprites}
+      />
   ))
 
   return (
